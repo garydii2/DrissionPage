@@ -374,7 +374,7 @@ class ChromiumPage(ChromiumBase):
         """alert出现时触发的方法"""
         self._alert.activated = True
         self._alert.text = kwargs['message']
-        self._alert.type = kwargs['message']
+        self._alert.type = kwargs.get('type')
         self._alert.defaultPrompt = kwargs.get('defaultPrompt', None)
         self._alert.response_accept = None
         self._alert.response_text = None
